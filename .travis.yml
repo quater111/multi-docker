@@ -24,3 +24,4 @@ after_success:
   - docker push complex/multi-nginx
   - docker push complex/multi-server
   - docker push complex/multi-worker
+  

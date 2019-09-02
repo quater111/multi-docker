@@ -24,4 +24,3 @@ after_success:
   - docker push bachelorprojectsoti/multi-nginx
   - docker push bachelorprojectsoti/multi-server
   - docker push bachelorprojectsoti/multi-worker
-  

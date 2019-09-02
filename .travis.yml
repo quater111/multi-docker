@@ -6,6 +6,7 @@ before_install:
   - gem install bundler
   - cd ./client
   - docker build -t complex/react-test -f Dockerfile.dev .
+  - cd ..
 
 script:
   - docker run complex/react-test npm run test -- --coverage --watchAll=false

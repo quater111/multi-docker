@@ -11,17 +11,17 @@ script:
   - docker run complex/react-test npm run test -- --coverage --watchAll=false
 
 after_success:
-  - docker build -t complex/multi-client ./client
-  - docker build -t compolex/multi-nginx ./nginx
-  - docker build -t compolex/multi-server ./server
-  - docker build -t compolex/multi-worker ./worker
+  - docker build -t bachelorprojectsoti/multi-client ./client
+  - docker build -t bachelorprojectsoti/multi-nginx ./nginx
+  - docker build -t bachelorprojectsoti/multi-server ./server
+  - docker build -t bachelorprojectsoti/multi-worker ./worker
 
 # Log in to the docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # Take those images and push them to docker hub
-  - docker push complex/multi-client
-  - docker push complex/multi-nginx
-  - docker push complex/multi-server
-  - docker push complex/multi-worker
+  - docker push bachelorprojectsoti/multi-client
+  - docker push bachelorprojectsoti/multi-nginx
+  - docker push bachelorprojectsoti/multi-server
+  - docker push bachelorprojectsoti/multi-worker
   

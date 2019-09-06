@@ -25,3 +25,17 @@ after_success:
   - docker push bachelorprojectsoti/multi-nginx
   - docker push bachelorprojectsoti/multi-server
   - docker push bachelorprojectsoti/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: eu-central-1
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-eu-central-1-044081138535
+  bucket_path: multi-docker
+  on:
+    branch: master
+  access_key_id: 
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY

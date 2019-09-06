@@ -19,7 +19,7 @@ services:
       - REDIS_HOST=redis
       # default port for redis
       - REDIS_PORT=6379
-      # default user for postgres
+      # default user for postgres aus docker-compose.yml
       - PGUSER=postgres
       # default host for postgres
       - PGHOST=postgres
